@@ -51,11 +51,13 @@ public class Queue {
 	
 	// Robert Lafore data structures algorithms programming project answer - 01
 	public void displayQueue() {
-		for(int i = front; i <= rear || i < maxSize; i++) {
-			System.out.print(ary[i] + " ");
-		}
-		for(int i = 0; (front > rear && i <= rear); i++) {
-			System.out.print(ary[i] + " ");
+		int i = front;
+		int count = 0;
+		while (count < nEle) {
+			if(i == maxSize)
+				i = 0;
+			System.out.print(ary[i++] + " ");
+			count++;
 		}
 		System.out.println();
 	}
